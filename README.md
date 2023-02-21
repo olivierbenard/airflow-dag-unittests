@@ -41,15 +41,15 @@ Before pushing your DAG to Airflow, you need to have an Airflow instance running
 
 1. The `docker-compose.yaml` file is already provisioned. You may also want to download it:
 
-    curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.2.2/docker-compose.yaml'
+        curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.2.2/docker-compose.yaml'
 
 2. Add necessary variables for the Airflow environment:
 
-    echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > .env
+        echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > .env
 
 3. Compose the Airflow image and run the container:
 
-    make airflow
+        make airflow-init
 
 Once started, Airflow's UI can be accessed via: [http://localhost:8080/](http://localhost:8080/)
 
@@ -148,4 +148,4 @@ You might need to mock the variables your code tries to access while executing t
 
     KeyError: 'Variable MY_VARIABLE does not exist'
 
-This is done using `@catch.dict()` as you can see [here](https://github.com/olivierbenard/airflow-dag-unittests/tests/test_dag.p#L14).
+This is done using `@catch.dict()` as you can see [here](https://github.com/olivierbenard/airflow-dag-unittests/blob/main/tests/test_dag.py#L14).

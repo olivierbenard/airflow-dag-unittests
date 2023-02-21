@@ -18,8 +18,11 @@ test:
 
 check: black mypy pylint test
 
-airflow:
+airflow-init:
 	docker-compose up -d airflow-init
+
+airflow-stop:
+	docker-compose down
 
 deploy-local:
 	cp -r airflow_dag_unittests* dags/
