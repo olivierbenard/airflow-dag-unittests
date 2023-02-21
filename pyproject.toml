@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "airflow-dag-unittests"
+version = "0.1.0"
+description = "Template to test your Airflow DAGs locally"
+authors = ["Olivier Bénard"]
+readme = "README.md"
+packages = [{include = "airflow_dag_unittests"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+apache-airflow = "^2.5.1"
+pytest = "^7.2.1"
+black = "^23.1.0"
+pylint = "^2.16.2"
+pre-commit = "^3.0.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

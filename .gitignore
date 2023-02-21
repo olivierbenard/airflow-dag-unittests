@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+
+
+.env
+logs/
+plugins/
+dags/*
+!dags/.gitkeep
+
+snippets/
